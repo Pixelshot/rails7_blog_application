@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   # First method of defining route
   # get 'about', to: 'pages#about'
 
+  # # Second method of defining
+  # get 'pages/about' 
+
+  # Delete later
   # Second method of defining
   get 'pages/about' 
   
