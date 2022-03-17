@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   # First method of defining route
-  get 'about', to: 'pages#about'
+  # get 'about', to: 'pages#about'
 
 
   # Second method of defining
-  # get 'pages/about' 
+  get 'pages/about' 
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
