@@ -3,10 +3,6 @@ Rails.application.routes.draw do
   # get 'about', to: 'pages#about'
 
   # # Second method of defining
-  # get 'pages/about' 
-
-  # Delete later
-  # Second method of defining
   get 'pages/about' 
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
