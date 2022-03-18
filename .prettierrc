@@ -1,1 +1,3 @@
-{"plugins": ["@prettier/plugin-ruby", "prettier-plugin-erb"]}
+{
+  "plugins": ["@prettier/plugin-ruby", "prettier-plugin-erb"]
+}

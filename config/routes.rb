@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   # First method of defining route
   # get 'about', to: 'pages#about'
 
