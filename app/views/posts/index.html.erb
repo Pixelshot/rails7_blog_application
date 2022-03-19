@@ -5,10 +5,10 @@
     <% @posts.each do |post| %>
       <%= render post %> <%# this is basically render 'posts/_post' %>
       <p>
-        <%= link_to "Show this post", post %>
+        <%= link_to "Show this post", post, class: 'btn btn-info' %>
       </p>
     <% end %>
   </div>
-<%= link_to "Home", root_path %> |
-<%= link_to "New post", new_post_path %>
+<%= link_to "Home", root_path, class:'btn btn-primary' %> |
+<%= link_to "New post", new_post_path, class: 'btn btn-warning' %>
 </div>
