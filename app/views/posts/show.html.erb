@@ -1,11 +1,11 @@
 <p style="color: green"><%= notice %></p>
-
-<%= render @post %>
-
-<div>
-  <%= link_to "Edit this post", edit_post_path(@post), class: 'btn btn-warning' %> |
-  <%= link_to "Back to posts", posts_path, class: 'btn btn-success' %>
-  <%= button_to "Destroy this post", @post, method: :delete, class: 'btn btn-danger' %> 
-  <%# in rails we need to have button_to and method: :delete to delete something from database. Otherwise it will not work %>
-  <%# The whole point of this is because it's a bit more specific when it comes to the DELETE method. Rails wants to ensure that nothing gets easily/accidentally deleted %>
+<div class="container">
+  <%= render @post %>
+  <div>
+    <%= link_to "Edit this post", edit_post_path(@post), class: 'btn btn-warning' %> |
+    <%= link_to "Back to posts", posts_path, class: 'btn btn-success' %>
+    <%= button_to "Destroy this post", @post, method: :delete, class: 'btn btn-danger' %> 
+    <%# in rails we need to have button_to and method: :delete to delete something from database. Otherwise it will not work %>
+    <%# The whole point of this is because it's a bit more specific when it comes to the DELETE method. Rails wants to ensure that nothing gets easily/accidentally deleted %>
+  </div>
 </div>
