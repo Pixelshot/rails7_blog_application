@@ -1,0 +1,12 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-custom {
+  background-color: #3F1651;
+  /* font-family: 'PT Serif', serif; */
+}
+
+.btn-red-orange {
+  background-color: #FF5349;
+}
