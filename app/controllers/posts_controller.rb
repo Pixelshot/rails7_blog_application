@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy] # set post will run before any of the actions listed in the array executes
+  before_action :authenticate_user!, except: %i[show index]
 
   # GET /posts or /posts.json
   def index
@@ -8,10 +9,10 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
-   @post.update(views: @post.views + 1)
+    @post.update(views: @post.views + 1)
     # The line above is basically:
     # views = @post.views + 1
-    # @post.views = views 
+    # @post.views = views
     # @post.save
   end
 
