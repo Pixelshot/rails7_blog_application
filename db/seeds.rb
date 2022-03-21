@@ -5,4 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-(1..10).each { |i| Post.create(title: "Post Number #{i}", body: "Some context for post ##{i}") }
+
+User.create(email: 'barry@mail.com', password: 'password', password_confirmation: 'password')
+
+(1..10).each { |i| Post.create(title: "Post Number #{i}", body: "Some context for post ##{i}", user_id: User.first.id) }

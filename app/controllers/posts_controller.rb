@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
   end
 
   # GET /posts/1 or /posts/1.json
@@ -27,6 +27,10 @@ class PostsController < ApplicationController
   # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
+    # authenticate_user above is going to make sure that we can never come to the create action unless we're signed in.
+    # This allows us to connect posts to current logged in user
+    # Part of the step to insert username into devise registration form
+    @post.user = current_user
 
     respond_to do |format|
       if @post.save
