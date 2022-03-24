@@ -2,12 +2,12 @@
   <h2>
     <%= post.title %>
   </h2>
-  <h4>
-    Posted by <%= link_to post.user.name, user_path(post.user) %>
-  </h4>
-  <h6><%= pluralize(post.views, "View count") %></h6>
-  <%# pluralize is just a grammer method rails has, that "View count" can be anything we want %>
   <div>
     <%= post.body %>
   </div>
+  <h5>
+    Posted by <%= link_to post.user.name, user_path(post.user) %>
+  </h5>
+  <h6><%= pluralize(post.views, "View count") %></h6>
+  <%# pluralize is just a grammer method rails has, that "View count" can be anything we want %>
 </div>

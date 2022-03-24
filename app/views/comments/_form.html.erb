@@ -1,0 +1,8 @@
+<%# Since we don't know how many comments are going to be created, we can use the build command %>
+<%# form_with(model: [name of model, model.comment.build]) %>
+<%= form_with(model: [post, post.comments.build]) do |f| %>
+  <div class="form-control">
+    <%= f.rich_text_area :body %>
+    <%= f.submit 'Reply', class: 'btn btn-primary mt-1' %>
+  </div>
+<% end %>

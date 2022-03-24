@@ -4,7 +4,14 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
-  resources :posts
+
+  # Resources basically takes care of every route under this page
+  # Think of individual posts, comments, etc.
+  # eg: user/posts/1/comments/4
+  resources :posts do
+    resources :comments
+  end
+
   # First method of defining route
   # get 'about', to: 'pages#about'
 

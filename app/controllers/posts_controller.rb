@@ -14,6 +14,7 @@ class PostsController < ApplicationController
     # views = @post.views + 1
     # @post.views = views
     # @post.save
+    @comments = @post.comments.order(created_at: :desc)
   end
 
   # GET /posts/new
